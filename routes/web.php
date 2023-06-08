@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('customers/', 'CustomerController@allCustomers');
+Route::get('customers/{id}', 'CustomerController@customerSortByAddress')->where('id', '\d+');
